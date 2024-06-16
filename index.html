@@ -5,8 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Howework – Shopping list</title>
   <link rel="icon" type="image/x-icon" href="./assets/image/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
-  
+  <header class="header">
+    <h1 class="header__title">CSS Dinner Shopping List</h1>
+    <h3 class="header__subtitle">Let’s go to the mall!</h3>
+  </header>
+  <main>
+    <ul class="list">
+      <li class="list__item">
+          <input type="checkbox" id="item1" class="list__checkbox">
+          <label for="item1">
+              <span class="list__item-name">A lot of pickles</span>
+              <span class="list__item-note">for the next lessons about CSS</span>
+          </label>
+      </li>
+      <li class="list__item">
+          <input type="checkbox" id="item2" class="list__checkbox">
+          <label for="item2">
+              <span class="list__item-name">10 apples</span>
+              <span class="list__item-note">for more CSS manipulations</span>
+          </label>
+      </li>
+      <li class="list__item">
+          <input type="checkbox" id="item3" class="list__checkbox">
+          <label for="item3">
+              <span class="list__item-name">20 oranges</span>
+              <span class="list__item-note">because they are awesome</span>
+          </label>
+      </li>
+      <li class="list__item">
+          <input type="checkbox" id="item4" class="list__checkbox">
+          <label for="item4">
+              <span class="list__item-name">13 plates</span>
+              <span class="list__item-note">hm... they always disappear</span>
+          </label>
+      </li>
+      <li class="list__item">
+          <input type="checkbox" id="item5" class="list__checkbox">
+          <label for="item5">
+              <span class="list__item-name">15 bentos</span>
+              <span class="list__item-note"></span>
+          </label>
+      </li>
+      <li class="list__item">
+          <input type="checkbox" id="item6" class="list__checkbox">
+          <label for="item6">
+              <span class="list__item-name">1 bottle of Sake</span>
+              <span class="list__item-note">for my friends</span>
+          </label>
+      </li>
+    </ul>
+    <button class="button">Bon appetit :)</button>
+  </main>
 </body>
 </html>

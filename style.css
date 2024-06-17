@@ -1,0 +1,157 @@
+@keyframes flash-red {
+  0% {
+    background-color: rgba(255, 137, 132, 1);
+  }
+  100% {
+    background-color: rgba(122, 117, 147, 1); /* Normal background color */
+  }
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+}
+
+body {
+  background-color: rgba(59, 63, 69, 1);
+  font-family: "Trebuchet MS", Trebuchet, Arial, sans-serif;
+}
+
+.header {
+  background-color: rgba(74, 79, 86, 1);
+  height: 82px;
+  text-align: center;
+  padding-top: 19px;
+  padding-bottom: 12px;
+  color: rgba(255, 137, 132, 1);
+}
+
+.header__title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.header__subtitle {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list {
+  padding: 20px 0 45px 0;
+  list-style-type: none;
+}
+
+.list__item {
+  background-color: rgba(136, 131, 158, 1);
+  color: white;
+  width: 534px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 12px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.1s ease-in;
+}
+
+/*
+zebra, bruh . . .
+
+li:nth-of-type(even) {
+  background-color: #77778E;
+} 
+*/
+
+.list__item::before,
+.list__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: all 0.1s ease-in;
+}
+
+.list__item::before {
+  top: 0;
+}
+
+.list__item::after {
+  bottom: 0;
+}
+
+.list__item:hover::before,
+.list__item:hover::after {
+  transform: scaleX(1);
+}
+
+.list__item:hover {
+  background-color: rgba(98, 94, 119, 1);
+}
+
+.list__checkbox {
+  height: 19px;
+  width: 19px;
+  cursor: pointer;
+}
+
+.list__item-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.list__item-name {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.list__item-note {
+  font-size: 11px;
+  line-height: 11px;
+}
+
+.list__item-note::before {
+  content: "(";
+}
+
+.list__item-note::after {
+  content: ")";
+}
+
+
+.button {
+  background-color: rgba(74, 79, 86, 1);
+  width: 534px;
+  height: 45px;
+  color: rgba(255, 137, 132, 1);
+  font-size: 18px;
+  line-height: 21px;
+  border: none;
+  cursor: pointer;
+}
+
+.list__checkbox:checked ~ .list__item-label .list__item-name,
+.list__checkbox:checked ~ .list__item-label .list__item-note {
+  text-decoration: line-through;
+}
+
+.list__item:has(>.list__checkbox:checked) {
+  background-color: rgba(122, 117, 147, 1);
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  animation: flash-red 0.3s;
+}

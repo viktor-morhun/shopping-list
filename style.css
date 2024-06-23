@@ -64,6 +64,7 @@ body {
   position: relative;
   overflow: hidden;
   transition: 0.1s ease-in;
+  cursor: pointer;
 }
 
 /*
@@ -109,8 +110,7 @@ li:nth-of-type(even) {
   cursor: pointer;
 }
 
-.list__item-label {
-  cursor: pointer;
+.list__item-container {
   display: flex;
   align-items: center;
 }

@@ -144,8 +144,8 @@ li:nth-of-type(even) {
   cursor: pointer;
 }
 
-.list__checkbox:checked ~ .list__item-label .list__item-name,
-.list__checkbox:checked ~ .list__item-label .list__item-note {
+.list__checkbox:checked ~ .list__item-container .list__item-name,
+.list__checkbox:checked ~ .list__item-container .list__item-note {
   text-decoration: line-through;
 }
 
